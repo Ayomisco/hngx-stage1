@@ -10,7 +10,7 @@ from .serializers import MyDataSerializer
 
 class MyApiView(APIView):
     def get(self, request):
-        slack_name = "Ayomide Francis-Akinlolu"  # Replace with your actual Slack name
+        slack_name = "Ayomide_Francis-Akinlolu"  
         track = "backend"
         current_day = datetime.now().strftime('%A')
         utc_time = datetime.utcnow().isoformat() + 'Z'
