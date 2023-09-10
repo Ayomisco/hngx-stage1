@@ -15,7 +15,7 @@ class MyApiView(APIView):
         current_day = datetime.now().strftime('%A')
         utc_time = datetime.utcnow().isoformat() + 'Z'
         # Replace with your GitHub file URL
-        github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
+        github_file_url = "https://github.com/Ayomisco/hngx-stage1/blob/main/README.md"
         # Replace with your GitHub repo URL
         github_repo_url = "https://github.com/Ayomisco/hngx-stage1"
         status_code = 200
