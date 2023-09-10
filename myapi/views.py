@@ -4,6 +4,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from datetime import datetime
+from django.utils import timezone
+
 from .models import MyData
 from .serializers import MyDataSerializer
 
@@ -12,8 +14,11 @@ class MyApiView(APIView):
     def get(self, request):
         slack_name = "ayomisco"  
         track = "backend"
+        # Get current day of the week
         current_day = datetime.now().strftime('%A')
-        utc_time = datetime.utcnow().isoformat() + 'Z'
+
+        # Get current UTC time formatted as "2023-09-10T17:04:33Z"
+        utc_time = timezone.now().strftime('%Y-%m-%dT%H:%M:%SZ')
         # Replace with your GitHub file URL
         github_file_url = "https://github.com/Ayomisco/hngx-stage1/blob/main/README.md"
         # Replace with your GitHub repo URL
